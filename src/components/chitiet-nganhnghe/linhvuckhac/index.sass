@@ -1,0 +1,90 @@
+.linhvuckhac 
+    background: #f3f3f3
+    padding-bottom: 4.5rem 
+    @media screen and (max-width: 768px)
+        padding-bottom: 3rem
+    h2 
+        font-size: 30px 
+        color: #333333
+        padding: 2rem 0
+    .list-item 
+        display: flex
+        flex: 0 0 100% 
+        max-width: 100%
+        margin-left: -10px
+        margin-right: -10px
+        flex-wrap: wrap
+        .item 
+            flex: 0 0 33.33%
+            max-width: 33.33%
+            padding: 10px
+            .img 
+                width: auto
+                height: 330px
+                position: relative
+                img 
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                .overlay 
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    right: 0
+                    display: flex 
+                    flex-direction: column
+                    align-items: center
+                    justify-content: flex-end
+                    transition: all .5s ease-in-out
+                    &:after
+                        content: ""
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        left: 0
+                        background: linear-gradient(to bottom, #e7b402 0%, #ff9900 100%)
+                        opacity: 0
+                        pointer-events: none
+                        transition: all .5s ease-in-out
+                    .button-viewmore
+                        position: relative
+                        display: none
+                        width: 180px
+                        height: 40px
+                        justify-content: center
+                        align-items: center
+                        border-radius: 20px
+                        font-size: 14px
+                        color: #ffffff
+                        text-transform: uppercase
+                        padding-right: 10px
+                        border: 1px solid #ffffff
+                        transition: .5s ease-in-out
+                        em 
+                            margin-left: 8px
+                        &:hover 
+                            // background: linear-gradient(90deg, #ffb100,#ff9900)
+                    .title
+                        position: relative
+                        z-index: 99
+                        padding-bottom: 20px
+                        font-size: 20px
+                        color: #ffffff
+                        text-align: center
+                        max-width: 80%
+                        transition: .5s ease-in-out
+            &:hover 
+                .overlay 
+                    justify-content: center
+                    &:after 
+                        opacity: 0.85
+                    .button-viewmore 
+                        z-index: 99
+                        display: flex
+        @media screen and (max-width: 768px)
+            .item 
+                flex: 0 0 100%
+                max-width: 100%
+

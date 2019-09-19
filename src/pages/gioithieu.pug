@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Giới thiệu'
+	- var bodyClass = 'giới thiệu-page'
+
+block main
+	include ../components/gioithieu/banner/index.pug
+	include ../components/gioithieu/breadcrumb/index.pug
+	include ../components/gioithieu/gioithieu/index.pug

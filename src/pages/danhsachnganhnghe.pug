@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'danh sách ngành nghề'
+	- var bodyClass = 'danh-sach-nganh-nghe-page'
+
+block main
+	include ../components/danhsachnganhnghe/banner/index.pug
+	include ../components/danhsachnganhnghe/breadcumb/index
+	include ../components/danhsachnganhnghe/danhsach/index

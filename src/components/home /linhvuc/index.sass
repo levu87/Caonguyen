@@ -1,0 +1,96 @@
+.linhvuc-wrapper
+    padding-bottom: 4.5rem
+    @media (max-width: 768px)
+        padding-bottom: 3rem 0
+    .list-item 
+        display: flex
+        flex: 0 0 100%
+        max-width: 100%
+        margin-left: -5px
+        margin-right: -5px
+        flex-wrap: wrap
+        .item 
+            flex: 0 0 25%
+            max-width: 25%
+            padding: 1.5px
+            .img 
+                width: auto
+                height: 450px
+                position: relative
+                img 
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                .overlay 
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    right: 0
+                    display: flex 
+                    flex-direction: column
+                    align-items: center
+                    justify-content: flex-end
+                    transition: all .5s ease-in-out
+
+                    &:after
+                        content: ""
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        left: 0
+                        background: linear-gradient(to bottom, #e7b402 0%, #ff9900 100%)
+                        opacity: 0
+                        pointer-events: none
+                        transition: all .5s ease-in-out
+                    .button-viewmore
+                        display: none
+                        width: 180px
+                        height: 40px
+                        justify-content: center
+                        align-items: center
+                        border-radius: 20px
+                        color: #ffffff
+                        text-transform: uppercase
+                        padding-right: 10px
+                        border: 1px solid #ffffff
+                        font-size: 14px
+                        em 
+                            margin-left: 8px
+                        &:hover 
+                            // background: linear-gradient(90deg, #ffb100,#ff9900)
+                    .title
+                        position: relative
+                        z-index: 99
+                        padding-bottom: 20px
+                        font-size: 20px
+                        color: #ffffff
+                        text-align: center
+                        max-width: 80%
+            &:hover 
+                .overlay 
+                    justify-content: center
+                    &:after 
+                        opacity: 0.85
+                    .button-viewmore 
+                        z-index: 99
+                        display: flex
+        @media (max-width: 1025px)
+            .item 
+                flex: 0 0 50%
+                max-width: 50%
+        @media (max-width: 425px)
+            .item 
+                flex: 0 0 100%
+                max-width: 100%
+                .img
+                    .title 
+                        a
+                            font-size: 16px 
+                    .button-viewmore
+                        width: 130px
+                        height: 30px
+                        font-size: 14px
+
+                        

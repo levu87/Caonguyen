@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Sản phẩm & Dịch vụ'
+	- var bodyClass = 'chi-tiet-san-pham-page'
+
+block main
+	include ../components/sanpham-chitiet/banner/index
+	include ../components/sanpham-chitiet/breadcumb/index
+	include ../components/sanpham-chitiet/chitiet/index

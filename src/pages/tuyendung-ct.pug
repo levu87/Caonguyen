@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'chi tiết tuyển dụng'
+	- var bodyClass = 'Tuyen-dung-ct-page'
+
+block main
+	include ../components/tuyendung-ct/banner/index
+	include ../components/tuyendung-ct/breadcrumb/index
+	include ../components/tuyendung-ct/chitiet/index

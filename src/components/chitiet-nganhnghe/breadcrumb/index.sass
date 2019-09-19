@@ -1,0 +1,26 @@
+.breadcrumb-wrapper
+    box-shadow: 0 0 10px rgba(0,0,0,.09)
+    .container
+        ol 
+            list-style: none 
+            padding: 15px 0
+            box-shadow: none
+            li 
+                display: inline-block
+                a 
+                    font-size: 14px 
+                    color: #666666
+            li:first-child,li:nth-child(2)
+                position: relative
+                margin-right: 30px
+                &:after 
+                    font: normal normal normal 24px/1 Material Design Icons
+                    content: '\f142'
+                    font-size: 14px
+                    color: #666666
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    right: -30px
+                    
+            

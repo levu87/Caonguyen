@@ -1,0 +1,13 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+	- var bodyClass = 'home-page'
+
+block main
+	include ../components/home /banner/index.pug
+	include ../components/home /gioithieu/index.pug
+	include ../components/home /linhvuc/index.pug
+	include ../components/home /duan/index.pug
+	include ../components/home /tintuc/index.pug
+	include ../components/home /doitac/index.pug

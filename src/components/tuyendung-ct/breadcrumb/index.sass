@@ -1,0 +1,27 @@
+.breadcrumb 
+    box-shadow: 0 0 10px rgba(0,0,0,.09)
+    .container
+        ul 
+            list-style: none 
+            padding: 15px 0
+            li 
+                display: inline-block
+                a 
+                    font-size: 14px 
+                    color: #666666
+            li:first-child
+                position: relative
+                margin-right: 30px
+                &:after 
+                    font: normal normal normal 24px/1 Material Design Icons
+                    content: '\f142'
+                    font-size: 14px
+                    color: #666666
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    right: -30px
+                    
+            li:nth-child(2)
+                &:after 
+                    display: none!important

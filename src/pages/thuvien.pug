@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Thư viện'
+	- var bodyClass = 'thu-vien-page'
+
+block main
+	include ../components/thuvien/banner/index.pug
+	include ../components/thuvien/breadcrumb/index.pug
+	include ../components/thuvien/thuvien/index.pug

@@ -1,0 +1,315 @@
+.header 
+    &.fixed
+        box-shadow: 0 0 8px rgba(0,0,0,.15)
+        position: fixed
+        z-index: 999
+        width: 100%
+        background: #ffff
+        .logo 
+            img 
+                width: 70px!important
+        .header-top
+            display: none!important
+            transition: all .4s ease-in-out
+            @media (max-width: 1025px)
+                display: flex!important
+        .menu-wrapper
+            padding: 0!important
+            &:before
+                margin-top: -8px
+        .sidebar-menu,.back-drop
+            top: 72.5px!important
+            height: calc(100% - 72.5px)!important
+    .header-wrapper 
+        display: flex
+        align-items: center
+        padding: 10px 0
+        .header-left 
+            .navbrand
+                .logo 
+        .header-right 
+            margin-left: auto
+            .header-top 
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                .searchbox 
+                    display: flex
+                    background: #f2f2f2
+                    padding: 2px 15px
+                    border-radius: 5px
+                    width: 250px
+                    input 
+                        background: none 
+                        border: none
+                        color: #999999
+                        font-size: 14px
+                        outline: none
+                        width: 100%
+                    input::placeholder 
+                        color: #bcbbbb
+                    .searchbutton 
+                        em 
+                            color: #999999
+                            font-size: 20px
+                .callbox 
+                    padding: 0 20px
+                    color: #0875bf
+                    font-size: 16px
+                .text 
+                    padding: 0 20px
+                .callbox,.text 
+                    position: relative
+                    &:after 
+                        content: ''
+                        background: #ebebeb
+                        position: absolute
+                        right: 0
+                        width: .5px
+                        height: 50%
+                        top: 50%
+                        transform: translateY(-50%)
+                        display: block
+                .language-wrapper
+                    position: relative
+                    padding-left: 15px
+                    .language-active
+                        position: relative 
+                        padding-right: 25px
+                        &:after 
+                            font: normal normal normal 24px/1 Material Design Icons
+                            content: '\f140'
+                            font-size: 24px
+                            color: #999999
+                            position: absolute
+                            top: 50%
+                            transform: translateY(-50%)
+                            right: 0
+                        a 
+                            color: #999999
+                            text-transform: uppercase
+                    .language-list
+                        position: absolute
+                        list-style: none
+                        top: 25px
+                        left: 50%
+                        transform: translateX(-50%)
+                        width: 100%
+                        text-align: center
+                        background: #333333
+                        box-shadow: 0 4px 5px rgba(0,0,0,.1)
+                        display: none
+                        z-index: 99
+                        li
+                            display: list-item
+                            a
+                                padding: 5px 0
+                                display: block
+                                color: #ffffff
+                                text-transform: uppercase
+                .toggle-button
+                    display: none
+                    justify-content: center
+                    align-items: center
+                    z-index: 99
+                    .button
+                        height: 2px
+                        width: 30px
+                        background: #333333
+                        position: relative
+                        transition: all 0ms 300ms
+                        &:after
+                            content: ""
+                            position: absolute
+                            left: 0
+                            width: 100%
+                            height: 100%
+                            bottom: 8px
+                            background: #333333
+                            transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+                        &:before
+                            content: ""
+                            position: absolute
+                            left: 0
+                            width: 100%
+                            height: 100%
+                            top: 8px
+                            background: #333333
+                            transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+                    &.active
+                        .button
+                            background: transparent
+                            &:before
+                                top: 0
+                                transform: rotate(45deg)
+                                transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+                            &:after
+                                bottom: 0
+                                transform: rotate(-45deg)
+                                transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+            .header-bottom 
+                .menu-wrapper 
+                    position: relative
+                    padding-top: 20px
+                    ul 
+                        list-style: none 
+                        li:nth-child(1)
+                            position: relative
+                            margin-right: 15px
+                            a
+                                font-size: 0
+                                &:before 
+                                    font: normal normal normal 24px/1 Material Design Icons
+                                    content: '\f2dc'
+                                    font-size: 20px
+                                    color: #0875bf
+                                    position: absolute
+                                    left: 0
+                                    top: 50%
+                                    transform: translateY(-50%)
+                        li 
+                            display: inline-block
+                            margin-left: 15px
+                            a 
+                                color: #333333
+                                font-size: 16px
+                                text-transform: uppercase
+                                font-weight: 600
+                            &:hover,&.active 
+                                a
+                                    color: #0875bf
+                                    transition: all .3s ease-in-out
+                            @media (max-width: 1200px)
+                                a 
+                                    font-size: 13px
+
+    @media (max-width: 1025px)
+        .Module.Module-139
+            display: none
+        .header-wrapper 
+            .header-left
+                .navbrand 
+                    .logo 
+                        img
+                            width: 70px!important
+                            height: auto
+            .header-right 
+                flex: 0 0 100%
+                max-width: 100%
+                .header-top
+                    justify-content: space-between
+                    .searchbox
+                        display: none      
+                    .callbox 
+                        display: none
+                    .text
+                        display: none
+                    .toggle-button 
+                        display: block
+                    .language-wrapper
+                       padding: 0
+                        
+                .header-bottom 
+                    display: none
+                .sidebar-menu 
+                    width: 300px
+                    background: linear-gradient(162deg, rgba(8,148,186,1) 34%, rgba(0,163,230,1) 92%)
+                    height: calc(100% - 72.5px)
+                    position: fixed
+                    top: 72.5px
+                    left: -300px
+                    transition: all .3s ease-in-out
+                    pointer-events: none
+                    z-index: 99
+                    padding: 0 20px
+                    .menu-wrapper
+                        display: none
+                    .searchbox 
+                        display: none 
+                    .callbox 
+                        display: none
+                    .text
+                        display: none
+                    &.active 
+                        left: 0
+                        pointer-events: initial
+                        overflow-y: auto
+                        .menu-wrapper
+                            display: block
+                            .main-menu 
+                                text-align: center
+                                list-style: none
+                                li 
+                                    padding: 10px
+                                    a 
+                                        color: #ffffff
+                                        font-size: 13px
+                                        text-transform: uppercase    
+                                    &:hover,&.active 
+                                        a
+                                            color: #333333
+                        .searchbox
+                            
+                            display: block
+                            background: none
+                            border: none
+                            position: relative
+                            display: flex
+                            input
+                                padding: 10px 20px
+                                outline: none
+                                background: #ffffff
+                                border: none
+                            
+                            button
+                                background: none 
+                                margin-left: auto
+                                display: flex
+                                align-items: center
+                            em 
+                                font-size: 24px
+                                color: #ffffff
+                            a 
+                                border: 1px solid #ffffff
+                                align-items: center
+                                justify-content: center
+                                margin-left: 5px
+                                display: flex
+                                width: 44px
+                                height: 44px
+
+                        .callbox 
+                            display: block
+                            
+                            background: none 
+                            border-top: 1px solid #fff
+                            border-bottom: 1px solid #fff
+                            width: 100%
+                            color: #fff
+                            text-align: center 
+                            padding: 10px 0
+                            font-weight: 700
+                            font-size: 13px
+                            margin-top: 10px
+                        .text
+                            color: #ffffff
+                            text-align: center
+                            display: none
+        .back-drop 
+            width: 100%
+            height: calc(100% - 72.5px)
+            top: 72.5px
+            background: rgba(#000000,.5)
+            position: fixed
+            opacity: 0
+            pointer-events: none
+            transition: .5s ease-in-out
+            left: 0
+            z-index: 9
+            &.active
+                opacity: 1
+                pointer-events: initial
+
+                        
+
+                        

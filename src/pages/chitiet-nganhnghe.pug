@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'chi tiet ngành nghề'
+	- var bodyClass = 'chi-tiet-nganh-nghe-page'
+
+block main
+	include ../components/danhsachnganhnghe/banner/index.pug
+	include ../components/chitiet-nganhnghe/breadcrumb/index.pug
+	include ../components/chitiet-nganhnghe/chitiet/index.pug
+	include ../components/chitiet-nganhnghe/linhvuckhac/index.pug

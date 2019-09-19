@@ -1,0 +1,98 @@
+.pages.newspager
+    display: flex
+    justify-content: center
+    padding-bottom: 4.5rem 
+    @media (max-width: 768px)
+        padding-bottom: 3rem
+    .modulepager
+        text-align: center
+        position: relative
+        width: 150px
+        &:after 
+            font: normal normal normal 24px/1 Material Design Icons
+            content: '\f054'
+            font-size: 16px
+            color: #999999
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
+        &:before
+            font: normal normal normal 24px/1 Material Design Icons
+            content: '\f04d'
+            font-size: 16px
+            color: #999999
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+        .pagination
+            list-style: none 
+            position: relative
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                bottom: -5px
+                left: 50%
+                transform: translate(-50%)
+                width: 100px
+                height: 2px 
+                background: #f3f3f3
+            li,.PagerOtherPageCells
+                display: inline-block
+                a 
+                    color: #999999
+                    font-size: 16px 
+                    padding: 6px 15px 
+                    position: relative
+                    &.active 
+                        color: #ff9100
+                        &:after
+                            content: ''
+                            display: block
+                            position: absolute
+                            bottom: 0px
+                            left: 50%
+                            transform: translate(-50%)
+                            width: 20px
+                            height: 3px 
+                            background: #ff9100
+                            z-index: 9
+            .PagerCurrentPageCell.active 
+                span
+                    font-size: 16px 
+                    padding: 6px 15px 
+                    color: #ff9100
+                    position: relative
+                    &:after
+                        content: ''
+                        display: block
+                        position: absolute
+                        bottom: 0px
+                        left: 50%
+                        transform: translate(-50%)
+                        width: 20px
+                        height: 2px 
+                        background: #ff9100
+                        z-index: 9
+            .LastPage 
+                display: none
+            a.NextPage
+                font-size: 0
+                display: none
+                position: relative
+                &:after 
+                    font: normal normal normal 24px/1 Material Design Icons
+                    content: '\f054'
+                    font-size: 16px
+                    color: #999999
+                    position: absolute
+                    top: 80%
+                    transform: translateY(-50%)
+                    right: 0
+            .FirstPage
+                display: none
+            .BackPage
+                display: none
+                position: relative

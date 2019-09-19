@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'Sản phẩm & Dịch vụ'
+	- var bodyClass = 'san-pham-page'
+
+block main
+	include ../components/sanpham/banner/index
+	include ../components/sanpham/breadcumb/index
+	include ../components/sanpham/sanpham/index
+	include ../components/sanpham/dichvu/index

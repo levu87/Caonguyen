@@ -1,0 +1,159 @@
+.quanhe
+    padding: 4.5rem 0 
+    @media (max-width: 768px)
+        padding: 3rem 0
+    .quanhe-wrapper 
+        .select-years
+            span 
+                font-weight: bold
+                position: relative
+                padding-left: 20px
+                &:before 
+                    content: ''
+                    display: block
+                    width: 3px 
+                    height: 30px
+                    position: absolute
+                    background: #ff9c00
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 0
+
+            .select
+                display: inline-block
+                position: relative
+                margin-left: 1rem
+                select
+                    width: 120px
+                    height: 30px
+                    color: #666666
+                    padding: 0 20px
+                    background: #f3f3f3
+                    font-size: 16px
+                    border-radius: 0
+                    border: 1px solid #e1e1e1
+                    -webkit-appearance: none
+                    -moz-appearance: none
+                    &:focus
+                        outline: none
+                &:after
+                    content: '\f140'
+                    font: normal normal normal 24px/1 Material Design Icons
+                    position: absolute
+                    top: 50%
+                    right: 20px
+                    font-size: 18px
+                    transform: translateY(-50%)
+                    color: #666666
+        .table-responsive
+            white-space: nowrap
+            overflow-x: auto
+            .table 
+                width: 100%
+                margin-top: 30px
+                thead
+                    background: #ff9c00
+                    tr 
+                        th
+                            padding: 20px 30px
+                            text-align: center
+                            color: #ffffff
+                            font-size: 16px
+                            font-weight: bold
+                            border: 1px solid #e1e1e1
+                            border-top: none
+                        .noidung
+                            text-align: left
+                tbody 
+                    tr 
+                        transition: all .4s ease-in-out
+                        td 
+                            padding: 20px 30px
+                            text-align: center
+                            border: 1px solid #e1e1e1
+                            a 
+                                color: #333333
+                        td:last-child
+                            a
+                                border-bottom: 2px solid #333333
+                                transition: all .4s ease-in-out
+                            
+                        .title
+                            text-align: left
+                        &:hover 
+                            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+                            td 
+                                color: #ff9c00
+                                transition: all .4s ease-in-out
+                                a 
+                                    color: #ff9c00
+                                    
+
+                            .title
+                                
+                                a 
+                                    color: #333333
+                                    text-decoration: none
+                    tr:first-child
+                        border-top: none
+        .pages
+            display: flex
+            justify-content: center
+            padding-top: 30px
+            .pagination 
+                text-align: center
+                position: relative
+                width: 200px
+                &:after 
+                    font: normal normal normal 24px/1 Material Design Icons
+                    content: '\f054'
+                    font-size: 16px
+                    color: #999999
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    right: 0
+                &:before
+                    font: normal normal normal 24px/1 Material Design Icons
+                    content: '\f04d'
+                    font-size: 16px
+                    color: #999999
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 0
+                ul 
+                    list-style: none 
+                    position: relative
+                    &:after
+                        content: ''
+                        display: block
+                        position: absolute
+                        bottom: -7px
+                        left: 50%
+                        transform: translate(-50%)
+                        width: 150px
+                        height: 3px 
+                        background: #f3f3f3
+                    li 
+                        display: inline-block
+                        a 
+                            color: #999999
+                            font-size: 16px 
+                            padding: 6px 15px 
+                            position: relative
+                            &.active 
+                                color: #ff9100
+                                &:after
+                                    content: ''
+                                    display: block
+                                    position: absolute
+                                    bottom: -3px
+                                    left: 50%
+                                    transform: translate(-50%)
+                                    width: 20px
+                                    height: 3px 
+                                    background: #ff9100
+                                    z-index: 9
+
+               

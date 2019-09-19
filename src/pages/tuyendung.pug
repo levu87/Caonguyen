@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Tuyển dụng'
+	- var bodyClass = 'Tuyển Dụng-page'
+
+block main
+	include ../components/tuyendung/banner/index
+	include ../components/tuyendung/breadcrumb/index
+	include ../components/tuyendung/tuyendung/index
