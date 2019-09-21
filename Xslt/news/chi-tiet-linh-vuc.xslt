@@ -23,7 +23,7 @@
             <div class="item">
                 <div class="img">
                     <img>
-                    <xsl:attribute name="src">
+                    <xsl:attribute name="src">   
                         <xsl:value-of select="ImageUrl"></xsl:value-of>
                     </xsl:attribute>
                     <xsl:attribute name="alt">
@@ -37,6 +37,7 @@
                             <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>
                             </xsl:attribute>
+                            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                         </a>
                         <a class="button-viewmore">
                             <xsl:attribute name="href">

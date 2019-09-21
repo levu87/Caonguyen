@@ -6,6 +6,11 @@
         <h1 class="title-h1"><xsl:value-of disable-output-escaping="yes" select="/ZoneList/ModuleTitle"></xsl:value-of></h1>
         <div class="tab-current"><span>Danh mục </span><em class="mdi mdi-chevron-down"></em></div>
         <nav class="row no-gutters tab-navigation">
+            <xsl:if test="IsActive='true'">
+				<xsl:attribute name="class">
+					<xsl:text>active</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
             <xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
         </nav>
         </xsl:if>
@@ -14,7 +19,7 @@
         <a class="button tab-link">
             <xsl:if test="IsActive='true'">
 				<xsl:attribute name="class">
-					<xsl:text> button active</xsl:text>
+					<xsl:text>active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
 

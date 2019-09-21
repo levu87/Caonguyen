@@ -95,12 +95,17 @@
             &:hover 
                 cursor: pointer
                 animation: jelly 0.5s
+        @media (max-width: 768px)
+            display: flex
+            justify-content: center
+            input[type="submit"]
+                width: 140px
+                height: 35px
+                margin-left: unset
+            .frm-btn
+                display: flex
+                justify-content: center
     @media(min-width: 768px)
         .frm-captcha
             width: 75%
             float: left
-        .frm-btnwrap
-            float: left
-            margin-top: 0
-            width: 25%
-            margin-left: 10px

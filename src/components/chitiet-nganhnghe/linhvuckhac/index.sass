@@ -22,6 +22,7 @@
                 width: auto
                 height: 330px
                 position: relative
+                overflow: hidden
                 img 
                     width: 100%
                     height: 100%
@@ -35,8 +36,9 @@
                     display: flex 
                     flex-direction: column
                     align-items: center
-                    justify-content: flex-end
+                    justify-content: center
                     transition: all .5s ease-in-out
+                    transform: translateY(40%)
                     &:after
                         content: ""
                         position: absolute
@@ -49,23 +51,23 @@
                         pointer-events: none
                         transition: all .5s ease-in-out
                     .button-viewmore
-                        position: relative
                         display: none
                         width: 180px
                         height: 40px
                         justify-content: center
                         align-items: center
                         border-radius: 20px
-                        font-size: 14px
                         color: #ffffff
                         text-transform: uppercase
                         padding-right: 10px
                         border: 1px solid #ffffff
-                        transition: .5s ease-in-out
+                        font-size: 14px
+                        transition: all .3s ease-in-out
                         em 
                             margin-left: 8px
                         &:hover 
                             // background: linear-gradient(90deg, #ffb100,#ff9900)
+                            box-shadow:  0 0 10px 0 #ebebeb inset, 0 0 20px 2px #ebebeb
                     .title
                         position: relative
                         z-index: 99
@@ -74,10 +76,9 @@
                         color: #ffffff
                         text-align: center
                         max-width: 80%
-                        transition: .5s ease-in-out
             &:hover 
                 .overlay 
-                    justify-content: center
+                    transform: translateY(0)
                     &:after 
                         opacity: 0.85
                     .button-viewmore 

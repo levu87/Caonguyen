@@ -7,8 +7,6 @@
         display: flex
         flex: 0 0 100% 
         max-width: 100%
-        margin-left: -10px
-        margin-right: -10px
         flex-wrap: wrap
         .item 
             flex: 0 0 33.33%
@@ -18,6 +16,7 @@
                 width: auto
                 height: 500px
                 position: relative
+                overflow: hidden
                 img 
                     width: 100%
                     height: 100%
@@ -31,9 +30,9 @@
                     display: flex 
                     flex-direction: column
                     align-items: center
-                    justify-content: flex-end
+                    justify-content: center
                     transition: all .5s ease-in-out
-
+                    transform: translateY(40%)
                     &:after
                         content: ""
                         position: absolute
@@ -57,10 +56,12 @@
                         padding-right: 10px
                         border: 1px solid #ffffff
                         font-size: 14px
+                        transition: all .3s ease-in-out
                         em 
                             margin-left: 8px
                         &:hover 
                             // background: linear-gradient(90deg, #ffb100,#ff9900)
+                            box-shadow:  0 0 10px 0 #ebebeb inset, 0 0 20px 2px #ebebeb
                     .title
                         position: relative
                         z-index: 99
@@ -71,7 +72,7 @@
                         max-width: 80%
             &:hover 
                 .overlay 
-                    justify-content: center
+                    transform: translateY(0)
                     &:after 
                         opacity: 0.85
                     .button-viewmore 

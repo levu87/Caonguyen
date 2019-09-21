@@ -1,5 +1,5 @@
 .gioithieu-wrapper 
-    .box:nth-child(1)
+    .box:nth-child(1n)
         display: flex
         flex: 0 0 100%
         max-width: 100%
@@ -34,7 +34,11 @@
                         p 
                             font-size: 18px
                             color: #333333
-                            padding: 10px 0
+                            padding: 0
+        @media (max-width: 1200px)
+            .box-content 
+                .content
+                    padding: 25px
         @media (max-width: 1025px)
             .box-content 
                 flex: 0 0 100%
@@ -42,13 +46,11 @@
                 box-shadow: unset
                 padding: 0
                 .content 
-                    padding: 0 0 15px
                     text-align: justify
             .box-img 
                 flex: 0 0 100%
                 max-width: 100%
-                margin-bottom: 30px
-    .box:nth-child(2)
+    .box:nth-child(2n)
         display: flex
         flex: 0 0 100%
         flex-wrap: wrap
@@ -80,9 +82,6 @@
                 padding: 40px
                 background-position: right!important
                 background-size: unset!important
-                @media (max-width: 1025px)
-                    padding: 0
-                    background: none
                 h2 
                     color: #0875bf
                     font-size: 26px 
@@ -93,13 +92,16 @@
                         p 
                             font-size: 16px
                             color: #333333
+        @media (max-width: 1200px)
+            .box-content
+                .content 
+                    padding: 25px
         @media (max-width: 1025px)
             .box-content 
                 flex: 0 0 100%
                 max-width: 100%
                 box-shadow: unset
-                padding: 0
             .box-img 
                 flex: 0 0 100%
                 max-width: 100%
-                margin-bottom: 30px
+                margin-top: 30px

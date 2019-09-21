@@ -41,7 +41,7 @@
             <td><xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of></td>
             <td><xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of></td>
             <td><xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of></td>
-            <td><xsl:value-of disable-output-escaping="yes" select="EndDate"></xsl:value-of></td>
+            <td><xsl:value-of disable-output-escaping="yes" select="EndDay"></xsl:value-of></td>
             <td> <a>
             
             <xsl:attribute name="href">
