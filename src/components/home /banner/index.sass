@@ -13,19 +13,32 @@
                         object-fit: cover
                 .title 
                     position: absolute
-                    bottom: 7rem
-                    left: 0
+                    bottom: 6rem
+                    left: 50%
+                    width: 90%
                     text-align: center
-                    width: 100%
+                    transform: translateX(-50%)
                     span
                         font-size: 48px
                         color: #ffffff
                         font-weight: lighter
-                   
-                        
                     @media (max-width: 876px)
                         span
                             font-size: 30px
+                @media (max-width: 768px)
+                    .title 
+                        span 
+                            font-size: 30px
+                @media (max-width: 480px)
+                    .img
+                        height: auto
+                        width: 100%
+                        img 
+                            object-fit: contain
+                    .title 
+                        bottom: 15px 
+                        span 
+                            font-size: 24px
         .swiper-pagination
             margin-top: 30px
             display: flex
@@ -34,6 +47,8 @@
             left: 0
             right: 0
             position: absolute
+            @media (max-width: 480px)
+                display: none
             span
                 width: 15px
                 height: 15px
@@ -45,6 +60,7 @@
                 position: static
                 &.swiper-pagination-bullet-active
                     background: linear-gradient(to bottom, #e7b402 0%, #ff9900 100%)
+        
         .swiper-btn-prev
             
             position: absolute
@@ -76,3 +92,6 @@
                 transition: .5s
                 &:hover 
                     color: #ff8c00
+        .swiper-btn-next,.swiper-btn-prev
+            @media (max-width: 480px)
+                display: none

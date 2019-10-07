@@ -97,16 +97,16 @@ function mappingText() {
 		breakpoint: 1025
 	}).watch();
 }
-function titleLienhe() {
-	return new MappingListener({
-		selector: ".contact-information .title-h1",
-		mobileWrapper: ".contact-information .form-wrapper",
-		mobileMethod: "insertBefore",
-		desktopWrapper: ".contact-information",
-		desktopMethod: "prependTo",
-		breakpoint: 1025
-	}).watch();
-}
+// function titleLienhe() {
+// 	return new MappingListener({
+// 		selector: ".contact-information .title-h1",
+// 		mobileWrapper: ".contact-information .form-wrapper",
+// 		mobileMethod: "insertBefore",
+// 		desktopWrapper: ".contact-information",
+// 		desktopMethod: "prependTo",
+// 		breakpoint: 1025
+// 	}).watch();
+// }
 function homeSlider() {
 	var swiper = new Swiper('.home-banner .swiper-container', {
 		pagination: {
@@ -132,7 +132,7 @@ function homeSlider() {
 	});
 }
 function swiperInit() {
-	var swiper = new Swiper('.doitac-wrapper .swiper-container', {
+	var swiper = new Swiper('.doitac-wrapper .swiper-doitac', {
 		loop: false,
 		spaceBetween: 50,
 		
@@ -159,14 +159,15 @@ function swiperInit() {
 				spaceBetween: 20
 			},
 			// when window width is >= 640px
-			1200: {
+			1025: {
 				slidesPerView: 5,
 				spaceBetween: 20
 			},
-			1440: {
+			1200: {
 				slidesPerView: 6,
 				spaceBetween: 20
 			}
+			
 		}
 	});
 }
@@ -183,12 +184,19 @@ function tabActive() {
 }
 
 function language() {
-	$('.language-active').on('click', function () {
-		$('.language-list').slideToggle()
-	})
+	$(".language-wrapper .language-active").on("click", function(e) {
+		$(this)
+			.parents(".language-wrapper")
+			.toggleClass("active");
+		$("html").one("click", function() {
+			$(".language-wrapper").removeClass("active");
+		});
+		e.stopPropagation();
+	});
 }
 function Aos(){
 	AOS.init({
+		disable: 'phone',
 		disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 		startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
 		initClassName: "aos-init", // class applied after initialization
@@ -213,6 +221,22 @@ function form(){
         $('.form-apply').slideToggle();
     })
 }
+function FilterSelect() {
+    $('.quanhe .quanhe-wrapper .select-years select').on('change', function() {
+        window.location.href = $(this).val()
+    })
+}
+
+function ButtonPrint(){
+	$('a.fax').on('click', function(){
+	window.print()
+	})
+	}
+function customOptionClicked() {
+	$("body").on("click", ".custom-option", function () {
+		$(this).parent().parent().find(".current-option span").html($(this).html()), $(this).parent().removeClass("active"), $(this).parent().parent().find(".current-option").removeClass("active")
+	})
+}
 $(document).ready(function () {
 	headerfixed()
 	setBackground()
@@ -229,5 +253,8 @@ $(document).ready(function () {
 	Aos()
 	toggleTab()
 	form()
-	titleLienhe()
+	// titleLienhe()
+	FilterSelect()
+	ButtonPrint()
+	customOptionClicked()
 });

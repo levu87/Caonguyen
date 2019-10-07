@@ -22,15 +22,12 @@
                                 <em class="mdi mdi-arrow-right"></em>
                             </a>
                             <p>Hoặc</p>
-                            <a class="button-down">
-
+                            <a class="button-down" download=''>
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="FileUrl"></xsl:value-of>
-                                </xsl:attribute>
-                                <xsl:attribute name="title">
-                                    <xsl:value-of select="Title"></xsl:value-of>
-                                </xsl:attribute>
-                                <xsl:text disable-output-escaping="yes">Tải mẫu đơn xin việc</xsl:text>
+                                        <xsl:value-of select="FileUrl"></xsl:value-of>
+                                    </xsl:attribute>
+                                
+                                Tải mẫu đơn xin việc
                                 <em class="mdi mdi-arrow-right"></em>
                             </a>
                         </div>

@@ -1,70 +1,93 @@
 .sanpham-chitiet
-    padding: 4.5rem 0 
-    @media (max-width: 768px)
-        padding: 3rem 0
+    padding: 7rem 0 
     .box
         margin-bottom: 30px 
-        .img 
-            img 
+        display: flex
+        flex: 0 0 100%
+        max-width: 100%
+        flex-wrap: wrap
+        .box-img
+            position: relative
+            flex: 0 0 50%
+            max-width: 50%
+            z-index: 99
+            padding: 10px
+            .img 
                 width: 100%
-        .content 
-            box-shadow: 
-            display: flex
-            flex-direction: column
-            height: 100%
-            justify-content: center
-            h2 
-                color: #333333
-                font-size: 30px
-                padding-bottom: 20px
-            p 
-                font-size: 16px
-                color: #333333
-                padding-bottom: 10px
-            .social-icon 
-                list-style: none
-                padding-bottom: 20px
-                li 
-                    display: inline-block
-                    margin-right: 10px
-                    .twt 
-                        background: #3c9cd8
-                        width: 40px
-                        height: 20px
-                        display: flex
-                        justify-content: center 
-                        align-items: center
-                        border-radius: 2px
-                        em 
-                            color: #ffffff
-                            font-size: 13px
-                    .fb
-                        background: #395aa1
-                        width: 40px
-                        height: 20px
-                        display: flex
-                        justify-content: center 
-                        align-items: center
-                        border-radius: 2px
-                        em 
-                            color: #ffffff
-                            font-size: 13px
-                    .fax
-                        background: #a3b4bb
-                        width: 40px
-                        height: 20px
-                        display: flex
-                        justify-content: center 
-                        align-items: center
-                        border-radius: 2px
-                        em 
-                            color: #ffffff
-                            font-size: 13px
-
-    @media (max-width: 1025px)
-        .box:nth-child(1)
-            .box-img
-                padding-bottom: 30px
+                height: 100%
+                img 
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+        .box-content
+            flex: 0 0 50%
+            max-width: 50%
+            padding: 10px
+            .content 
+                box-shadow: 
+                display: flex
+                flex-direction: column
+                height: 100%
+                justify-content: center
+                h2 
+                    color: #333333
+                    font-size: 30px
+                    padding-bottom: 20px
+                p 
+                    font-size: 16px
+                    color: #333333
+                    padding-bottom: 10px
+                .social-icon 
+                    list-style: none
+                    padding-bottom: 20px
+                    li 
+                        display: inline-block
+                        margin-right: 10px
+                        .twt 
+                            background: #3c9cd8
+                            width: 40px
+                            height: 20px
+                            display: flex
+                            justify-content: center 
+                            align-items: center
+                            border-radius: 2px
+                            em 
+                                color: #ffffff
+                                font-size: 13px
+                        .fb
+                            background: #395aa1
+                            width: 40px
+                            height: 20px
+                            display: flex
+                            justify-content: center 
+                            align-items: center
+                            border-radius: 2px
+                            em 
+                                color: #ffffff
+                                font-size: 13px
+                        .fax
+                            background: #a3b4bb
+                            width: 40px
+                            height: 20px
+                            display: flex
+                            justify-content: center 
+                            align-items: center
+                            border-radius: 2px
+                            em 
+                                color: #ffffff
+                                font-size: 13px
+        @media (max-width: 768px)
+            .box-content 
+                flex: 0 0 100%
+                max-width: 100%
+                box-shadow: unset
+                padding: 0
+            .box-img 
+                flex: 0 0 100%
+                max-width: 100%
+                padding: 0
+    @media (max-width: 768px)
         .box:nth-child(2n)
+            flex-direction: column-reverse
             .box-content 
                 padding-bottom: 30px

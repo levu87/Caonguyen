@@ -29,7 +29,7 @@
     <xsl:template match="News">
         <tr> 
             <td><xsl:value-of select="position()"></xsl:value-of></td>
-            <td class="noidung"><a>
+            <td class="noidung" attribute="Chức vụ"><a>
             <xsl:attribute name="href">
                 <xsl:value-of select="Url"></xsl:value-of>
             </xsl:attribute>
@@ -38,11 +38,11 @@
             </xsl:attribute>
             <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
             </a></td>
-            <td><xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of></td>
-            <td><xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of></td>
-            <td><xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of></td>
-            <td><xsl:value-of disable-output-escaping="yes" select="EndDay"></xsl:value-of></td>
-            <td> <a>
+            <td attribute="Số lượng"><xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of></td>
+            <td attribute="Nơi làm việc"><xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of></td>
+            <td attribute="Ngày đăng"><xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of></td>
+            <td attribute="Hạn nộp"><xsl:value-of disable-output-escaping="yes" select="EndDate"></xsl:value-of></td>
+            <td attribute="Xem"> <a>
             
             <xsl:attribute name="href">
                 <xsl:value-of select="Url"></xsl:value-of>

@@ -1,27 +1,23 @@
 .chinhsach 
-    padding-top: 4.5rem 
-    @media (max-width: 768px)
-        padding-top: 3rem
-    @media (max-width: 1025px)
-        padding-bottom: 30px
+    padding-top: 7rem 
     .img 
         img 
             width: 100% 
     p 
         font-size: 18px
         line-height: 28px
-
+        @media (max-width: 1025px)
+            padding: 20px 0
 .che-do 
-    padding: 4.5rem 0
-    @media (max-width: 768px)
-        padding: 3rem
+    padding: 7rem 0
     .item 
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
         background: #ffffff
-        padding: 40px
+        padding: 4rem
+        transition: all .3s ease-in-out
         .img 
             width: auto 
             height: 90px
@@ -47,13 +43,21 @@
                 color: #333333
         @media (max-width: 1025px)
             margin-bottom: 30px
+        @media (max-width: 480px)
+            padding: 20px
+            h3 
+                font-size: 16px
+            .content 
+                p 
+                    font-size: 14px
+        &:hover 
+            transform: translateY(-15px)
 .vitri-ungtuyen 
-    padding: 4.5rem 0
-    @media (max-width: 768px)
-        padding: 3rem 0
+    padding: 7rem 0
     .table-responsive 
         white-space: nowrap
-        overflow-x: auto
+        @media (max-width: 1200px)
+            overflow-x: auto
         .table 
             width: 100%
             margin-top: 30px
@@ -73,6 +77,7 @@
             tbody 
                 tr 
                     td 
+                        font-size: 1.6rem
                         transition: all .4s ease-in-out
                         padding: 20px 30px
                         text-align: center
@@ -99,6 +104,56 @@
                         
                             a
                                 border-bottom: none
+        @media screen and(max-width:768px)
+            .table
+                thead
+                    display: none
+                tbody
+                    tr
+                        border-bottom: 1px solid #e0e0e0!important
+                        position: relative
+                        padding: 16px 0
+                        display: flex
+                        flex-wrap: wrap
+                        height: 100%
+                        border: none
+                        th
+                            flex: 0 0 100%
+                            text-align: left
+                                
+                            &:before
+                                font-size: 24px
+                        td
+                            flex: 0 0 100%
+                            border: none
+                            padding: 0
+
+                            line-height: 2
+                            &:nth-child(2)
+                                &:before
+                                    display: none
+                                a
+                                    position: absolute
+                                    top: 15px
+                                    left: 50px
+                                    font-size: 1.8rem
+                                    font-weight: 600
+                                    text-transform: uppercase
+                                    color: #ff9c00
+                                    white-space: pre-wrap
+                    
+                            &:not(:nth-child(1))
+                                text-align: left
+                        td:nth-child(1)
+                            text-align: left
+                            font-weight: 600
+                            font-size: 1.8rem
+                            padding-bottom: 25px
+                            color: green
+                            &:before
+                                display: none
+                            &:before
+                                content: attr(attribute) ": "
     .pages
         display: flex
         justify-content: center

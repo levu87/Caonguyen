@@ -1,7 +1,5 @@
 .doitac-wrapper
-    padding: 4.5rem 0
-    @media (max-width: 768px)
-        padding: 3rem 0
+    padding: 7rem 0
     .container
         .list-items 
             display: flex 
@@ -14,6 +12,7 @@
                 flex: 0 0 16.66%
                 max-width: 16.66% 
                 padding: 10px
+                
                 .img 
                     width: auto
                     height: 125px 
@@ -25,7 +24,7 @@
                         object-fit: scale-down
                 &:hover 
                     .img
-                        box-shadow: 0px 0px 10px 0px #888888
+                        box-shadow: 0px 0px 10px 0px rgba(#999999,.5)
                         transition: .5s ease-in-out
             .items:nth-child(2),.items:nth-child(6),.items:nth-child(4),.items:nth-child(7),.items:nth-child(9),.items:nth-child(11),.items:nth-child(12).items:nth-child(14),.items:nth-child(16),.items:nth-child(18),.items:nth-child(14)
                 .img 
@@ -38,3 +37,5 @@
                 .items 
                     flex: 0 0 50%
                     max-width: 50%
+                    .img
+                        background: none!important

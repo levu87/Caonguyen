@@ -10,6 +10,8 @@
           <xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
         </div>
         <div class="swiper-pagination"></div>
+        <div class="swiper-btn-prev"><em class="lnr lnr-chevron-left"> </em></div>
+					<div class="swiper-btn-next"><em class="lnr lnr-chevron-right"></em></div>
       </div>
     </section>
   </xsl:template>

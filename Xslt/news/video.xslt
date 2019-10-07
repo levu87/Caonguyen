@@ -34,9 +34,9 @@
             </xsl:if>
 
             <div class="item">
-                <a data-fancybox="image">
+                <a data-fancybox="video">
                     <xsl:attribute name="href">
-                        <xsl:value-of select="ImageUrl"></xsl:value-of>
+                        <xsl:value-of select="SubTitle"></xsl:value-of>
                     </xsl:attribute>
                     <xsl:attribute name="title">
                         <xsl:value-of select="Title"></xsl:value-of>
@@ -53,9 +53,7 @@
                             </img>
                         </div>
                         <figcaption>
-                            <div class="play-button">
-                                <xsl:text disable-output-escaping="yes"><img src="/Data/Sites/1/media/play-button.png" alt=""></xsl:text> 
-                            </div>
+                            <em class="mdi mdi-play-circle-outline"></em>
                             <h3><xsl:value-of select="Title"></xsl:value-of></h3>
                         </figcaption>
                     </figure>

@@ -34,11 +34,11 @@
                             <xsl:attribute name="href">
                                 <xsl:value-of select="FileUrl"></xsl:value-of>
                             </xsl:attribute>
-                            <a class="download">
-                                            <xsl:attribute name="title">
-                                                <xsl:value-of select="Title"></xsl:value-of>
-                                            </xsl:attribute>
-                                            <xsl:text disable-output-escaping="yes">Tải về</xsl:text> 
+                            <a class="download" download=''>
+                                <xsl:attribute name="href">
+                                        <xsl:value-of select="FileUrl"></xsl:value-of>
+                                    </xsl:attribute>
+                                            Tải về
                                     <em class="lnr lnr-download"></em></a></div>
                     </div>
                 </div>

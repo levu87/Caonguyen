@@ -8,7 +8,7 @@
 					</div>
     </xsl:template>
     <xsl:template match="News">
-        <xsl:if test="position()>1">
+        <xsl:if test="position() &gt; 1">
             <div class="col-12 col-lg-4 item">
                 <div class="img"> 
                 <img>

@@ -1,7 +1,5 @@
 .tintuc-wrapper 
-    padding: 4.5rem 0 
-    @media screen and(max-width:768px)
-        padding: 3rem 0
+    padding: 7rem 0 
     .list-tintuc 
         figure 
             .img 
@@ -24,6 +22,11 @@
                         color: #333333
                         font-size: 18px
                         padding: 10px 0
+                        display: -webkit-box
+                        -webkit-line-clamp: 2
+                        -webkit-box-orient: vertical
+                        overflow: hidden
+                        text-overflow: ellipsis
                 p
                     color: #666666
                     font-size: 16px
@@ -45,4 +48,4 @@
     @media (max-width: 1025px)
         .list-tintuc
             .item 
-                padding-bottom: 30px
+                padding-bottom: 3rem

@@ -5,7 +5,7 @@
         <section class="doitac-wrapper"> 
 				<h1 class="title-h1" data-aos="zoom-out" data-aos-offset="120" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-in-out"><xsl:value-of disable-output-escaping="yes" select="/BannerList/ModuleTitle"></xsl:value-of></h1>
 				<div class="container">
-					<div class="swiper-container" data-aos="fade-up">
+					<div class="swiper-doitac" data-aos="fade-up">
 						<div class="swiper-wrapper">
 							<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 							

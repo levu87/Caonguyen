@@ -28,6 +28,8 @@
             .content
                 padding: 40px
                 background-size: unset!important
+                p 
+                    font-size: 16px
                 ul 
                     margin-left: 20px
                     li
@@ -41,12 +43,14 @@
                     padding: 25px
         @media (max-width: 1025px)
             .box-content 
+                background-image: unset!important
                 flex: 0 0 100%
                 max-width: 100%
                 box-shadow: unset
                 padding: 0
                 .content 
                     text-align: justify
+                    padding: 0 0 30px
             .box-img 
                 flex: 0 0 100%
                 max-width: 100%
@@ -87,8 +91,14 @@
                     font-size: 26px 
                 ul 
                     margin-left: 20px
-                    list-style: url('./img/reload.png')
+                    list-style: none
                     li
+                        position: relative
+                        &:before 
+                            display: block
+                            content: '-'
+                            position: absolute
+                            left: -20px
                         p 
                             font-size: 16px
                             color: #333333
@@ -98,9 +108,12 @@
                     padding: 25px
         @media (max-width: 1025px)
             .box-content 
+                background-image: unset!important
                 flex: 0 0 100%
                 max-width: 100%
                 box-shadow: unset
+                .content 
+                    padding: 0
             .box-img 
                 flex: 0 0 100%
                 max-width: 100%

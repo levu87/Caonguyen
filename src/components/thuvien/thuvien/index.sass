@@ -1,31 +1,33 @@
 .thuvien
-    padding: 0 0 30px!important
+    padding: 0 0 3rem!important
     .title-h1 
-        padding-bottom: 30px!important
+        padding-bottom: 3rem!important
     .navigation-wrapper
         white-space: nowrap
         overflow-x: auto
         .tab-navigation 
             padding-bottom: 30px
             display: flex
-            justify-content: center
+            justify-content: center    
             a 
-                padding: 0 25px
+                padding: 0 40px
                 height: 40px
                 border: 1px solid #ffb100
                 display: flex
                 align-items: center
                 justify-content: center
-                color: #333333
                 text-transform: uppercase
                 font-size: 16px
-                border-radius: 20px
+                border-radius: 30px
+                white-space: nowrap
                 margin-right: 20px
-                transition: all .5s ease-in-out
+                transition: all .3s ease
+                color: #333333
                 &:hover,&.active
                     background: linear-gradient(to right, #e7b402 0%, #ff9900 100%)
                     border: 1px solid #f900
                     color: #ffffff
+        
         @media (max-width: 1025px)
             .tab-navigation
                 flex-wrap: nowrap

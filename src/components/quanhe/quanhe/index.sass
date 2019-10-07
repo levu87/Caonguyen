@@ -1,7 +1,5 @@
 .quanhe
-    padding: 4.5rem 0 
-    @media (max-width: 768px)
-        padding: 3rem 0
+    padding: 7rem 0 
     .quanhe-wrapper 
         .select-years
             span 
@@ -47,7 +45,8 @@
                     color: #666666
         .table-responsive
             white-space: nowrap
-            overflow-x: auto
+            @media (max-width: 1200px)
+                overflow-x: auto
             .table 
                 width: 100%
                 margin-top: 30px
@@ -64,10 +63,12 @@
                             border-top: none
                         .noidung
                             text-align: left
+                            border: none
                 tbody 
                     tr 
                         transition: all .4s ease-in-out
                         td 
+                            font-size: 1.6rem
                             padding: 20px 30px
                             text-align: center
                             border: 1px solid #e1e1e1
@@ -80,22 +81,78 @@
                             
                         .title
                             text-align: left
-                        &:hover 
+                    tr:first-child
+                        border-top: none
+                &:hover 
+                    thead 
+                        tr 
+                            .noidung 
+                                a 
+                                    border: none
+                    tbody
+                        tr
                             box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
                             td 
                                 color: #ff9c00
                                 transition: all .4s ease-in-out
                                 a 
                                     color: #ff9c00
-                                    
-
+                                    border-bottom: 2px solid #ff9c00
                             .title
                                 
                                 a 
                                     color: #333333
                                     text-decoration: none
-                    tr:first-child
-                        border-top: none
+                                    border: none
+            @media screen and(max-width:768px)
+                .table
+                    thead
+                        display: none
+                    tbody
+                        tr
+                            border-bottom: 1px solid #e0e0e0!important
+                            position: relative
+                            padding: 16px 0
+                            display: flex
+                            flex-wrap: wrap
+                            height: 100%
+                            border: none
+                            th
+                                flex: 0 0 100%
+                                text-align: left
+                                    
+                                &:before
+                                    font-size: 24px
+                            td
+                                flex: 0 0 100%
+                                border: none
+                                padding: 0
+                                line-height: 2
+                                &:nth-child(2)
+                                    &:before
+                                        display: none
+                                    a
+                                        position: absolute
+                                        top: 15px
+                                        left: 50px
+                                        font-size: 1.8rem
+                                        font-weight: 600
+                                        text-transform: uppercase
+                                        color: #ff9c00
+                                        white-space: pre-wrap
+                        
+                                &:not(:nth-child(1))
+                                    text-align: left
+                            td:nth-child(1)
+                                text-align: left
+                                font-weight: 600
+                                font-size: 1.8rem
+                                padding-bottom: 25px
+                                color: green
+                                &:before
+                                    display: none
+                                &:before
+                                    content: attr(attribute) ": "
         .pages
             display: flex
             justify-content: center

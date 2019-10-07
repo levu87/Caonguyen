@@ -43,6 +43,8 @@
         display: flex
         .frm-captcha-input
             width: calc(100% - 227px)
+            @media (max-width: 480px)
+                width: calc(100% - 170px)
             label
                 display: none
         .RadCaptcha
@@ -55,11 +57,19 @@
                 align-items: center
                 display: flex
                 width: 227px
+                @media (max-width: 480px)
+                    width: 170px
+                    img 
+                        width: 120px!important
+                        height: 40px!important
         .rcRefreshImage
             margin: 0 10px
             font-size: 0
             &:after
                 content: url('/Data/Sites/1/media/refresh.png')
+                @media (max-width: 480px)
+                    width: 20px
+                    height: auto
     .frm-btnwrap
         margin-top: 20px
         label
@@ -68,6 +78,7 @@
             display: none
         .frm-btn
             width: 100%
+            margin-top: -15px
         @keyframes jelly 
             0%,100% 
                 transform: scale(1, 1) 
@@ -86,6 +97,7 @@
             justify-content: center
             align-items: center
             border-radius: 20px
+            font-size: 14px
             border: none
             color: #ffffff
             text-transform: uppercase

@@ -1,7 +1,5 @@
 .thuvien
-    padding: 4.5rem 0 
-    @media (max-width: 768px)
-        padding: 3rem 0
+    padding: 7rem 0 
     .title-h1 
         padding-bottom: 30px!important
     .tab-navigation 
@@ -9,23 +7,24 @@
         display: flex
         justify-content: center
         a 
-            padding: 0 25px
+            padding: 0 40px
             height: 40px
             border: 1px solid #ffb100
             display: flex
             align-items: center
             justify-content: center
-            color: #333333
             text-transform: uppercase
             font-size: 16px
-            border-radius: 20px
+            border-radius: 30px
             white-space: nowrap
             margin-right: 20px
-            transition: all .5s ease-in-out
+            transition: all .3s ease
+            color: #333333
             &:hover,&.active
                 background: linear-gradient(to right, #e7b402 0%, #ff9900 100%)
                 border: 1px solid #f900
                 color: #ffffff
+        
     @media (max-width: 1025px)
         .tab-navigation
             flex-wrap: nowrap
@@ -340,10 +339,9 @@
                             transform: scale(1.4)
                             transition: all .5s ease-in-out
 .tin-tuc
-    margin-bottom: 4.5rem
-    @media (max-width: 768px)
-        margin-bottom: 3rem
+    margin-bottom: 7rem
     .items
+        margin-bottom: 30px
         figure 
             height: 100%
             background: #f3f3f3
@@ -351,10 +349,12 @@
                 height: 245px 
                 width: auto
                 display: block
+                overflow: hidden
                 img 
                     width: 100%
                     height: 100%
                     object-fit: cover
+                    transition: all .4s ease-in-out
             figcaption 
                 padding: 30px 20px
                 time 
@@ -375,14 +375,17 @@
                     overflow: hidden
                     text-overflow: ellipsis
             &:hover 
-                .title 
-                    h3
+                h3
+                    .title 
                         color: #ff9100
                         text-decoration: underline
                         transition: all .5s ease-in-out
+                .img 
+                    img 
+                        transform: scale(1.15)
 @media (max-width: 1025px)
     #tab-1
         .items
-            padding-bottom: 30px
+            padding-bottom: 3rem
 
 
