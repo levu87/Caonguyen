@@ -9,7 +9,6 @@
     DescriptionControlType="textarea"
     ShowPrimaryImage="true"
     ShowSecondImage="true"
-
 	/>
 <portal:BannerDisplaySettings runat="server" 
 	ShowDescription="true"
